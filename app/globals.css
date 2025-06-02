@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-poppins: var(--font-poppins);
+    --font-cabinet: var(--font-cabinet);
+  }
+
+  /* Set Poppins as default font for entire body */
+  body {
+    font-family: var(--font-poppins);
+  }
+}
+
+/* Cabinet Grotesk Variable */
+@font-face {
+  font-family: "Cabinet Grotesk Variable";
+  src: url("/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
