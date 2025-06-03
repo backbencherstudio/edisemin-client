@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Banner from "./_components/banner";
 
 export default function HomePage() {
   return (
-    <div className='min-h-screen flex items-center justify-center mx-auto text-center'>Hello World</div>
-  )
+    <div>
+      <Banner />
+    </div>
+  );
 }

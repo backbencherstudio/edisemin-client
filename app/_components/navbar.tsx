@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -88,7 +88,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <button className="bg-[#5B46FF] text-white px-4 py-2 rounded-full hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md cursor-pointer flex items-center gap-4">
               Get Started
-              <LuMoveUpRight className="w-8 h-8 bg-white rounded-full p-1 text-[#5B46FF] hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md" />
+              <LuMoveUpRight className="w-6 h-6 bg-white rounded-full p-1 text-[#5B46FF] hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md" />
             </button>
           </div>
 
