@@ -26,7 +26,7 @@ export default function Banner() {
             fill
           />
         </div>
-        <div className="absolute -bottom-10 left-10 w-12 h-12 md:w-16 md:h-16">
+        <div className="absolute -bottom-20 md:-bottom-10 left-10 w-12 h-12 md:w-16 md:h-16 ">
           <Image
             src="/images/banner-3.png"
             alt="student 3"
@@ -34,7 +34,7 @@ export default function Banner() {
             fill
           />
         </div>
-        <div className="absolute -bottom-10 right-10 w-12 h-12 md:w-16 md:h-16">
+        <div className="absolute -bottom-20 md:-bottom-10 right-10 w-12 h-12 md:w-16 md:h-16">
           <Image
             src="/images/banner-4.png"
             alt="student 4"
