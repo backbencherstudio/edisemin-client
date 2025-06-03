@@ -12,6 +12,10 @@
   }
 }
 
+.font-cabinet {
+  font-family: var(--font-cabinet);
+}
+
 /* Cabinet Grotesk Variable */
 @font-face {
   font-family: "Cabinet Grotesk Variable";
@@ -19,4 +23,10 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
