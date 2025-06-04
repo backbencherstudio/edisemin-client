@@ -3,6 +3,7 @@ import Banner from "./_components/banner";
 import Journy from "./_components/journy";
 import CareerPath from "./_components/career-path";
 import CareerCalculator from "./_components/career-calculator";
+import StudentCareer from "./_components/student-career";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Journy />
       <CareerPath />
       <CareerCalculator />
+      <StudentCareer />
     </div>
   );
 }
