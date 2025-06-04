@@ -1,10 +1,10 @@
 import React from "react";
 
-interface InstagramIconProps {
+interface CalculatorIconProps {
   className?: string;
 }
 
-export default function CalculatorIcon({ className }: InstagramIconProps) {
+export default function CalculatorIcon({ className }: CalculatorIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
