@@ -8,7 +8,8 @@ export default function CareerCalculator() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-4 sm:px-8">
-        {/* Left Images */}
+        
+        {/* Left Image */}
         <div className="w-full lg:w-[40%] flex justify-center">
           <div className="rounded-xl overflow-hidden shadow-md max-w-[320px] w-full">
             <Image
@@ -22,12 +23,24 @@ export default function CareerCalculator() {
         </div>
 
         {/* Right Content */}
-        <div className="w-full lg:w-[60%] max-w-xl">
+        <div className="w-full lg:w-[60%] max-w-xl relative">
           <h2 className="text-4xl sm:text-5xl font-bold leading-[126%] text-[#070707] font-cabinet text-center lg:text-left">
             <span className="text-violet-600">Why Choose</span> Career <br />
             Calculator?
           </h2>
 
+          {/* Decorative Arrow */}
+          <div className="hidden lg:block w-16 h-16 sm:w-20 sm:h-20 absolute top-[-30px] right-[5%] sm:right-[15%] md:right-[20%] lg:top-12 lg:right-24">
+            <Image
+              src="/images/bottom-arrow.png"
+              alt="Arrow"
+              width={80}
+              height={80}
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Feature Cards */}
           <div className="mt-8 space-y-6">
             <div className="flex items-start sm:items-center gap-4 bg-violet-50 p-4 rounded-xl shadow-sm">
               <ManIcon className="text-violet-600 min-w-[24px]" />
