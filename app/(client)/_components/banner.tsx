@@ -87,7 +87,9 @@ export default function Banner() {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-8 h-8 bg-[#B6E1DC] p-2 rounded-full" />
           </div>
           <div className="mt-2 bg-white border rounded-md shadow w-full max-w-xl p-4">
-            <p className="text-sm font-medium text-[#6C63FF]">Software Developer</p>
+            <p className="text-sm font-medium text-[#6C63FF]">
+              Software Developer
+            </p>
             <p className="text-xs text-gray-600">
               Design, develop and maintain software applications and systems
             </p>
