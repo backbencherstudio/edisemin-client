@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import ReusableHeading from "@/app/_components/reusable-heading";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Link from "next/link";
 
 const selectedGcse = [
   { name: "English Language", grade: "4-9" },
@@ -310,9 +311,11 @@ export default function SubjectSelectionDynamic() {
             </div>
 
             <div className="mt-8">
-              <button className="flex items-center gap-2 text-sm text-gray-700 hover:underline">
-                ◀ Back
-              </button>
+              <Link href="/subject-selection">
+                <button className="flex items-center gap-2 text-sm text-gray-700 hover:underline cursor-pointer">
+                  ◀ Back
+                </button>
+              </Link>
             </div>
           </div>
         </div>

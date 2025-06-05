@@ -1,6 +1,7 @@
 "use client";
 
 import CalculatorIcon from "@/public/icons/calculator-icon";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const gcseGrades = [9, 8, 7, 6, 5, 4, 3, 2, 1];
@@ -235,10 +236,12 @@ export default function SubjectSelectionInfo() {
 
       {/* Button */}
       <div className="col-span-1 md:col-span-2 flex justify-center mb-20">
-        <button className="mt-6 bg-[#5B46FF] hover:bg-[#4a4ce6] text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 cursor-pointer">
-          <CalculatorIcon className="w-5 h-5" />
-          Calculate Degree Matches
-        </button>
+        <Link href="/subject-selection-dynamic">
+          <button className="mt-6 bg-[#5B46FF] hover:bg-[#4a4ce6] text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 cursor-pointer">
+            <CalculatorIcon className="w-5 h-5" />
+            Calculate Degree Matches
+          </button>
+        </Link>
       </div>
     </div>
   );
