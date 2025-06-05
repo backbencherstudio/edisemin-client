@@ -1,7 +1,7 @@
 import React from "react";
 import ReusableHeading from "@/app/_components/reusable-heading";
 import InfoCard from "./_components/info-card";
-
+import SubjectSelectionInfo from "./_components/subject-selection";
 export default function SubjectSelection() {
   return (
     <div className="container px-4 py-16 space-y-8">
@@ -61,6 +61,8 @@ export default function SubjectSelection() {
           />
         </div>
       </div>
+
+      <SubjectSelectionInfo />
     </div>
   );
 }
