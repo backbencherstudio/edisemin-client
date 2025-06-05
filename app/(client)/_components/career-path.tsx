@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import CalculatorIcon from "@/public/icons/calculator-icon";
 import StarIcon from "@/public/icons/star-icon";
 import Image from "next/image";
 import Link from "next/link";
@@ -78,9 +79,10 @@ export default function CareerPath() {
               </div>
 
               {/* Text Content */}
-              <p className="text-sm text-gray-500 mt-4 px-2 pb-2">
+              <p className="text-xl text-[#0B0A33]  font-semibold mt-4 px-2 pb-2 leading-[150%]">
                 <strong>{card.title}</strong>
-                <br />
+              </p>
+              <p className="text-[#4A4C56] leading-[150%]">
                 {card.description}
               </p>
             </div>
@@ -91,6 +93,7 @@ export default function CareerPath() {
         <div className="mt-12">
           <Link href="/subject-selection">
             <Button className="bg-[#5B46FF] hover:bg-[#3c31a9] transition-all duration-300 cursor-pointer text-white rounded-full px-6 py-2 text-sm font-medium">
+              <CalculatorIcon className="w-8 h-8" />
               Use Full Calculator
             </Button>
           </Link>
