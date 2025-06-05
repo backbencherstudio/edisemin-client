@@ -3,6 +3,7 @@ import Image from "next/image";
 import ManIcon from "@/public/icons/man-icon";
 import CapIcon from "@/public/icons/cap-icon";
 import BarIcon from "@/public/icons/bar-icon";
+import cooseImg from "@/public/images/choose.png";
 
 export default function CareerCalculator() {
   return (
@@ -12,7 +13,7 @@ export default function CareerCalculator() {
         <div className="w-full lg:w-[40%] flex justify-center">
           <div className="rounded-xl overflow-hidden shadow-md  w-full">
             <Image
-              src="/images/choose.png"
+              src={cooseImg}
               alt="Thinking person"
               width={300}
               height={200}
