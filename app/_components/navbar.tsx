@@ -11,8 +11,8 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "Subject Selection", href: "/subject-selection" },
   { name: "About Us", href: "/about-us" },
-  { name: "Contact", href: "/contact" },
   { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

@@ -64,7 +64,7 @@ export default function CareerPath() {
           {careerCards.map((card) => (
             <div
               key={card.id}
-              className="bg-white p-2 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all relative"
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all relative"
             >
               {/* Image + white upward shadow */}
               <div className="relative">
@@ -78,13 +78,15 @@ export default function CareerPath() {
                 <div className="absolute bottom-0 left-0 right-0 h-30 bg-gradient-to-t from-white to-transparent rounded-b-md" />
               </div>
 
-              {/* Text Content */}
-              <p className="text-xl text-[#0B0A33]  font-semibold mt-4 px-2 pb-2 leading-[150%]">
-                <strong>{card.title}</strong>
+              <div className="px-8 pb-4">
+                {/* Text Content */}
+                <p className="text-xl text-[#0B0A33]  font-semibold mt-4 pb-2 leading-[150%]">
+                  <strong>{card.title}</strong>
               </p>
               <p className="text-[#4A4C56] leading-[150%]">
                 {card.description}
               </p>
+              </div>
             </div>
           ))}
         </div>

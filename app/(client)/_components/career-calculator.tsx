@@ -7,11 +7,10 @@ import BarIcon from "@/public/icons/bar-icon";
 export default function CareerCalculator() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-4 sm:px-8">
-        
+      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-4 sm:px-8">
         {/* Left Image */}
         <div className="w-full lg:w-[40%] flex justify-center">
-          <div className="rounded-xl overflow-hidden shadow-md max-w-[320px] w-full">
+          <div className="rounded-xl overflow-hidden shadow-md  w-full">
             <Image
               src="/images/choose.png"
               alt="Thinking person"
