@@ -1,5 +1,6 @@
 "use client";
 
+import CalculatorIcon from "@/public/icons/calculator-icon";
 import React, { useState } from "react";
 
 const gcseGrades = [9, 8, 7, 6, 5, 4, 3, 2, 1];
@@ -149,7 +150,10 @@ export default function SubjectSelectionInfo() {
                     )
                   }
                 />
-                <label htmlFor={`gcse-${index}`} className="text-sm text-[#4A4C56]">
+                <label
+                  htmlFor={`gcse-${index}`}
+                  className="text-sm text-[#4A4C56]"
+                >
                   {subject.name}
                 </label>
                 {subject.mandatory && (
@@ -230,9 +234,9 @@ export default function SubjectSelectionInfo() {
       </div>
 
       {/* Button */}
-      <div className="col-span-1 md:col-span-2 flex justify-center">
-        <button className="mt-6 bg-[#5B46FF] hover:bg-[#4a4ce6] text-white px-6 py-2 rounded-full text-sm font-semibold">
-            {/* <CalculatorIcon */}
+      <div className="col-span-1 md:col-span-2 flex justify-center mb-20">
+        <button className="mt-6 bg-[#5B46FF] hover:bg-[#4a4ce6] text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 cursor-pointer">
+          <CalculatorIcon className="w-5 h-5" />
           Calculate Degree Matches
         </button>
       </div>
