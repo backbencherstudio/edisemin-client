@@ -40,10 +40,26 @@ export default function Footer() {
               About Us
             </h3>
             <ul className="space-y-2 text-base">
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Our Mission</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Team</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Partners</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Blog</a></li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Our Mission
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Partners
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -53,11 +69,31 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Home</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Calculator</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Services</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Contact</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-700">Privacy</a></li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Calculator
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-purple-700">
+                  Privacy
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -10,16 +10,16 @@ export default function StartPlanning() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-br from-[#B0D2DA] via-[#EDEDEF] to-white py-12 rounded-[24px] px-6 sm:px-12 lg:px-24 text-center">
+    <section className="w-full bg-gradient-to-br from-[#CEE3E9] via-[#ffff] to-[#EFD2E9] py-12 rounded-[24px] px-6 sm:px-12 lg:px-24 text-center">
       <h2 className="text-2xl sm:text-[44px] font-semibold text-black leading-[126%]">
         Start Planning Your Future with <br />
-        <span className="text-[#5B46FF] font-semibold ">
+        <span className="text-[#5B46FF] font-semibold">
           Career Calculator Today
         </span>
         <span>!</span>
       </h2>
       <p className="mt-4 text-[#4A4C56] max-w-2xl mx-auto text-sm sm:text-base">
-        Discover degrees and career paths impacted by your subject choices.{" "}
+        Discover degrees and career paths matched to your subject choices.{" "}
         <br />
         Make smarter academic decisions and build confidence in your next step.
       </p>

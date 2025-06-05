@@ -36,27 +36,29 @@ const privacySections = [
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-20">
-      <h1 className="font-cabinet text-xl md:text-5xl font-bold text-center text-[#070707] mb-2">
+    <div className="max-w-4xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
+      <h1 className="font-cabinet text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#070707] mb-4 sm:mb-6">
         Privacy Policy
       </h1>
-      <p className="text-center text-gray-600 mb-10">
+      <p className="text-center text-gray-600 mb-8 sm:mb-10">
         Learn how Career Calculator collects, uses, and protects your data.
       </p>
 
-      <div className="space-y-6 text-sm text-gray-800 leading-relaxed">
+      <div className="space-y-6 text-sm sm:text-base text-gray-800 leading-relaxed">
         {privacySections.map((section, index) => (
           <div key={index}>
-            <h2 className="text-xl leading-[126%] font-semibold text-[#070707] mb-3">
+            <h2 className="text-xl sm:text-2xl leading-[126%] font-semibold text-[#070707] mb-3">
               {section.title}
             </h2>
             {section.isHTML ? (
               <p
-                className="text-sm text-gray-800"
+                className="text-sm sm:text-base text-gray-800"
                 dangerouslySetInnerHTML={{ __html: section.content }}
               />
             ) : (
-              <p>{section.content}</p>
+              <p className="text-sm sm:text-base text-gray-800">
+                {section.content}
+              </p>
             )}
           </div>
         ))}
