@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqData = [
   {
@@ -33,7 +38,7 @@ const faqData = [
 export default function StudentCareer() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <div className="flex flex-col justify-between gap-8">
@@ -51,9 +56,10 @@ export default function StudentCareer() {
           <div className="w-full">
             <div className="flex flex-col gap-3 max-w-md">
               <p className="text-gray-500 text-sm">
-                Real stories from students who used our Career Calculator to make confident decisions about their future.
+                Real stories from students who used our Career Calculator to
+                make confident decisions about their future.
               </p>
-              <button className="rounded-full px-6 py-2 w-fit bg-[#5B46FF] text-white hover:text-[#5B46FF] hover:bg-transparent border  hover:border-[#5B46FF] ease-in duration-200 cursor-pointer">
+              <button className="rounded-full px-6 py-2 w-fit bg-[#5B46FF] text-white hover:text-[#5B46FF] hover:bg-transparent border hover:border-[#5B46FF] ease-in duration-200 cursor-pointer">
                 Get In Touch
               </button>
             </div>
@@ -61,8 +67,8 @@ export default function StudentCareer() {
         </div>
 
         {/* FAQ Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          <div className="flex flex-col justify-between gap-8">
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          <div className="flex flex-col justify-between gap-8 lg:w-[450px]">
             <div className="rounded-xl overflow-hidden w-full max-w-sm mx-auto lg:mx-0">
               <Image
                 src="/images/career-img.png"
@@ -80,9 +86,9 @@ export default function StudentCareer() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-[#F3F3F3] rounded-xl px-4"
+                  className="bg-[#F1EFFF] rounded-xl px-4 cursor-pointer"
                 >
-                  <AccordionTrigger className="text-left text-base font-semibold">
+                  <AccordionTrigger className="text-left text-base font-semibold cursor-pointer">
                     Q: {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm text-gray-600">

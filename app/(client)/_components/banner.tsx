@@ -82,7 +82,7 @@ export default function Banner() {
             <input
               type="text"
               placeholder="Search by career (e.g., Software Engineer) or degree (e.g., Computer Science)"
-              className="w-full px-5 py-3 pl-12 rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#6C63FF]"
+              className="w-full px-5 py-3 pl-12 rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#6C63FF] placeholder:text-sm"
             />
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-8 h-8 bg-[#B6E1DC] p-2 rounded-full" />
           </div>
