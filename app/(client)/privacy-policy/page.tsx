@@ -37,7 +37,7 @@ const privacySections = [
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-20">
-      <h1 className="text-3xl md:text-4xl font-bold text-center text-[#070707] mb-2">
+      <h1 className="font-cabinet text-xl md:text-5xl font-bold text-center text-[#070707] mb-2">
         Privacy Policy
       </h1>
       <p className="text-center text-gray-600 mb-10">
