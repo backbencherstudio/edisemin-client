@@ -2,6 +2,7 @@ import ReusableHeading from "@/app/_components/reusable-heading";
 import React from "react";
 import OurPurpose from "./_components/our-purpose";
 import KeyFeatures from "./_components/key-features";
+import ImportantGuidelines from "./_components/important-guidelines";
 
 export default function AboutUs() {
   return (
@@ -15,6 +16,9 @@ export default function AboutUs() {
       <OurPurpose />
       <div className="my-20">
         <KeyFeatures />
+      </div>
+      <div className="my-20">
+        <ImportantGuidelines />
       </div>
     </div>
   );
