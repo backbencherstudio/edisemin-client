@@ -5,7 +5,7 @@ import CalculatorIcon from "@/public/icons/calculator-icon";
 import { useRouter } from "next/navigation";
 
 const gcseGrades = [9, 8, 7, 6, 5, 4, 3, 2, 1];
-const aLevelGrades = ["A+", "A", "B", "C"];
+const aLevelGrades = ["A*", "A", "B", "C"];
 
 const gcseSubjects = [
   { name: "English Language", mandatory: true },
@@ -187,7 +187,7 @@ export default function SubjectSelectionInfo() {
 
       // Make API call
       const response = await fetch(
-        "https://revisions-subjects-damage-journals.trycloudflare.com/api/calculate/match",
+        "https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/calculate/match",
         {
           method: "POST",
           headers: {
