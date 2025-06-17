@@ -14,7 +14,7 @@ export default function Banner() {
   // Function to fetch suggestions from the API
   const fetchSuggestions = async (query: string) => {
     if (query.length === 0) {
-      setFilteredSuggestions([]); // Clear suggestions if query is empty
+      setFilteredSuggestions([]);
       return;
     }
 
@@ -24,13 +24,27 @@ export default function Banner() {
         `https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/calculate/suggest?q=${query}`
       );
       const data = await response.json();
-      console.log("result:", data);
-
-      // Ensure suggestions are set correctly
+      console.log("Suggestions result:", data);
       setFilteredSuggestions(data || []);
     } catch (error) {
       console.error("Error fetching suggestions:", error);
       setFilteredSuggestions([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Function to fetch the data for a clicked suggestion
+  const fetchDataByQuery = async (query: string) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        `https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/calculate/search?q=${query}`
+      );
+      const data = await response.json();
+      console.log("Data for query:", query, data);
+    } catch (error) {
+      console.error("Error fetching data for query:", query, error);
     } finally {
       setIsLoading(false);
     }
@@ -41,6 +55,12 @@ export default function Banner() {
     const value = e.target.value;
     setSearchTerm(value);
     fetchSuggestions(value);
+  };
+
+  // Handle click on a suggestion
+  const handleSuggestionClick = (suggestion: string) => {
+    setSearchTerm(suggestion);
+    fetchDataByQuery(suggestion);
   };
 
   return (
@@ -126,23 +146,25 @@ export default function Banner() {
           </div>
 
           {/* Suggestions Dropdown */}
-          {searchTerm.length > 0 && filteredSuggestions.length > 0 && !isLoading && (
-            <div className="mt-2 bg-white border rounded-md shadow-lg w-full max-w-xl p-4 text-start max-h-[30vh] overflow-y-auto">
-              {filteredSuggestions.map((suggestion, index) => (
-                <div
-                  key={index}
-                  className="text-sm font-semibold text-[#6C63FF] py-2 cursor-pointer hover:bg-[#f0f0f0] rounded-md transition-all duration-300"
-                >
-                  <p>{suggestion}</p>
-                  {/* Description (if any) can be added here */}
-                  <p className="text-xs text-gray-600">
-                    Design, develop and maintain software applications and
-                    systems
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
+          {searchTerm.length > 0 &&
+            filteredSuggestions.length > 0 &&
+            !isLoading && (
+              <div className="mt-2 bg-white border rounded-md shadow-lg w-full max-w-xl p-4 text-start max-h-[30vh] overflow-y-auto">
+                {filteredSuggestions.map((suggestion, index) => (
+                  <div
+                    key={index}
+                    className="text-sm font-semibold text-[#6C63FF] py-2 cursor-pointer hover:bg-[#f0f0f0] rounded-md transition-all duration-300"
+                    onClick={() => handleSuggestionClick(suggestion)}
+                  >
+                    <p>{suggestion}</p>
+                    <p className="text-xs text-gray-600">
+                      Design, develop and maintain software applications and
+                      systems
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
         </div>
       </div>
     </div>
