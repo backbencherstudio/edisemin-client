@@ -7,8 +7,60 @@ import LocationIcon from "@/public/icons/location-icon";
 import MessageIcon from "@/public/icons/message-icon";
 import PhoneIcon from "@/public/icons/phone-icon";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  issue: string;
+}
 
 export default function Contact() {
+  // Initialize the React Hook Form
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>();
+
+  // Function to handle form submission
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      // Send the form data to the API
+      const response = await fetch(
+        "https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/support/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      const result = await response.json();
+      console.log("result", result);
+      console.log("Form submitted successfully:", result);
+
+      // Show success toast
+      toast.success("Message sent successfully! We'll get back to you soon.");
+
+      // Reset the form after successful submission
+      reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Show error toast
+      toast.error("Failed to send message. Please try again.");
+    }
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-16 sm:py-20 space-y-12">
       <h1 className="font-cabinet text-3xl sm:text-5xl font-bold text-center text-[#070707] mb-4">
@@ -28,27 +80,69 @@ export default function Contact() {
             We will send you the latest company and industry news
           </p>
 
-          <form className="space-y-4">
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <label className="block text-sm text-gray-800 mb-2">Name</label>
-              <Input placeholder="Type Your Name" />
+              <Input
+                {...register("name", { required: "Name is required" })}
+                placeholder="Type Your Name"
+                className="w-full"
+                disabled={isSubmitting}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-xs">{errors.name.message}</p>
+              )}
             </div>
+
             <div>
               <label className="block text-sm text-gray-800 mb-2">Email</label>
-              <Input placeholder="Type Your Email" />
+              <Input
+                {...register("email", { required: "Email is required" })}
+                placeholder="Type Your Email"
+                className="w-full"
+                disabled={isSubmitting}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-xs">{errors.email.message}</p>
+              )}
             </div>
+
             <div>
               <label className="block text-sm text-gray-800 mb-2">Phone</label>
-              <Input placeholder="Type Your Phone" />
+              <Input
+                {...register("phone", { required: "Phone is required" })}
+                placeholder="Type Your Phone"
+                className="w-full"
+                disabled={isSubmitting}
+              />
+              {errors.phone && (
+                <p className="text-red-500 text-xs">{errors.phone.message}</p>
+              )}
             </div>
+
             <div>
               <label className="block text-sm text-gray-800 mb-2">
                 Message
               </label>
-              <Textarea placeholder="Type Your Message" rows={4} />
+              <Textarea
+                {...register("issue", { required: "Message is required" })}
+                placeholder="Type Your Message"
+                rows={4}
+                className="w-full"
+                disabled={isSubmitting}
+              />
+              {errors.issue && (
+                <p className="text-red-500 text-xs">{errors.issue.message}</p>
+              )}
             </div>
-            <Button className="w-full mt-4 bg-[#6C63FF] text-white hover:bg-[#5749d6] cursor-pointer">
-              Send Message
+
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full mt-4 bg-[#6C63FF] text-white hover:bg-[#5749d6] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
