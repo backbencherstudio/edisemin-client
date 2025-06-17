@@ -2,11 +2,47 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { LuMoveUpRight } from "react-icons/lu";
 import { Search } from "lucide-react";
 
 export default function Banner() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Function to fetch suggestions from the API
+  const fetchSuggestions = async (query: string) => {
+    if (query.length === 0) {
+      setFilteredSuggestions([]); // Clear suggestions if query is empty
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        `https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/calculate/suggest?q=${query}`
+      );
+      const data = await response.json();
+      console.log("result:", data);
+
+      // Ensure suggestions are set correctly
+      setFilteredSuggestions(data || []);
+    } catch (error) {
+      console.error("Error fetching suggestions:", error);
+      setFilteredSuggestions([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Handle input change and fetch suggestions
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    fetchSuggestions(value);
+  };
+
   return (
     <div className="py-40 my-20">
       <div className="relative w-full text-center container mx-auto">
@@ -82,18 +118,31 @@ export default function Banner() {
             <input
               type="text"
               placeholder="Search by career (e.g., Software Engineer) or degree (e.g., Computer Science)"
-              className="w-full px-5 py-3 pl-12 rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#6C63FF] placeholder:text-sm"
+              value={searchTerm}
+              onChange={handleInputChange}
+              className="w-full px-6 py-3 pl-12 rounded-full border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#6C63FF] placeholder:text-sm text-xl font-medium"
             />
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-8 h-8 bg-[#B6E1DC] p-2 rounded-full" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#6C63FF] w-8 h-8 bg-white p-2 rounded-full" />
           </div>
-          <div className="mt-2 bg-white border rounded-md shadow w-full max-w-xl p-4">
-            <p className="text-sm font-medium text-[#6C63FF]">
-              Software Developer
-            </p>
-            <p className="text-xs text-gray-600">
-              Design, develop and maintain software applications and systems
-            </p>
-          </div>
+
+          {/* Suggestions Dropdown */}
+          {searchTerm.length > 0 && filteredSuggestions.length > 0 && !isLoading && (
+            <div className="mt-2 bg-white border rounded-md shadow-lg w-full max-w-xl p-4 text-start max-h-[30vh] overflow-y-auto">
+              {filteredSuggestions.map((suggestion, index) => (
+                <div
+                  key={index}
+                  className="text-sm font-semibold text-[#6C63FF] py-2 cursor-pointer hover:bg-[#f0f0f0] rounded-md transition-all duration-300"
+                >
+                  <p>{suggestion}</p>
+                  {/* Description (if any) can be added here */}
+                  <p className="text-xs text-gray-600">
+                    Design, develop and maintain software applications and
+                    systems
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
