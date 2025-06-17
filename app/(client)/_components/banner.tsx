@@ -181,7 +181,7 @@ export default function Banner() {
           {searchTerm.length > 0 &&
             filteredSuggestions.length > 0 &&
             !isLoading && (
-              <div className="mt-2 bg-white border rounded-md shadow-lg w-full max-w-xl p-4 text-start max-h-[30vh] overflow-y-auto">
+              <div className="mt-2 bg-white border rounded-md shadow-lg mx-2 md:mx-0 w-full md:max-w-xl p-4 text-start max-h-[30vh] overflow-y-auto absolute z-10 top-full left-0 sm:left-1/4 md:left-[15%] lg:left-[28%]">
                 {filteredSuggestions.map((suggestion, index) => (
                   <div
                     key={index}
