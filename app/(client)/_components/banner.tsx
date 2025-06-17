@@ -5,8 +5,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { LuMoveUpRight } from "react-icons/lu";
 import { Search } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Banner() {
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -43,6 +45,21 @@ export default function Banner() {
       );
       const data = await response.json();
       console.log("Data for query:", query, data);
+
+      // Create a unique ID for this search
+      const searchId = Date.now().toString();
+
+      // Store the data in localStorage
+      localStorage.setItem(
+        `search_${searchId}`,
+        JSON.stringify({
+          query: query,
+          result: data,
+        })
+      );
+
+      // Navigate to the search results page
+      router.push(`/search-results/${searchId}`);
     } catch (error) {
       console.error("Error fetching data for query:", query, error);
     } finally {
@@ -60,7 +77,16 @@ export default function Banner() {
   // Handle click on a suggestion
   const handleSuggestionClick = (suggestion: string) => {
     setSearchTerm(suggestion);
+    setFilteredSuggestions([]);
     fetchDataByQuery(suggestion);
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      fetchDataByQuery(searchTerm.trim());
+    }
   };
 
   return (
@@ -134,7 +160,7 @@ export default function Banner() {
           <p className="text-md md:text-lg font-semibold text-gray-800 mb-2">
             Already know your dream career?
           </p>
-          <div className="relative w-full max-w-xl">
+          <form onSubmit={handleSubmit} className="relative w-full max-w-xl">
             <input
               type="text"
               placeholder="Search by career (e.g., Software Engineer) or degree (e.g., Computer Science)"
@@ -143,7 +169,13 @@ export default function Banner() {
               className="w-full px-6 py-3 pl-12 rounded-full border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#6C63FF] placeholder:text-sm text-xl font-medium"
             />
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#6C63FF] w-8 h-8 bg-white p-2 rounded-full" />
-          </div>
+            <button
+              type="submit"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#6C63FF] text-white px-4 py-1 rounded-full text-sm hover:bg-[#5749d6] transition-colors"
+            >
+              Search
+            </button>
+          </form>
 
           {/* Suggestions Dropdown */}
           {searchTerm.length > 0 &&
@@ -158,8 +190,7 @@ export default function Banner() {
                   >
                     <p>{suggestion}</p>
                     <p className="text-xs text-gray-600">
-                      Design, develop and maintain software applications and
-                      systems
+                      Click to see detailed requirements and career paths
                     </p>
                   </div>
                 ))}
