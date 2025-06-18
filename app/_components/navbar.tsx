@@ -62,8 +62,8 @@ export default function Navbar() {
               <Image
                 src="/images/logo.png"
                 alt="logo"
-                width={100}
-                height={100}
+                width={140}
+                height={140}
               />
             </Link>
           </div>

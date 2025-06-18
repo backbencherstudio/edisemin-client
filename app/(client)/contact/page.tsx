@@ -31,7 +31,7 @@ export default function Contact() {
     try {
       // Send the form data to the API
       const response = await fetch(
-        "https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/support/create",
+        "https://inn-powerseller-fares-renew.trycloudflare.com/api/support/create",
         {
           method: "POST",
           headers: {
