@@ -187,7 +187,7 @@ export default function SubjectSelectionInfo() {
 
       // Make API call
       const response = await fetch(
-        "https://pushing-clinton-unfortunately-navigation.trycloudflare.com/api/calculate/match",
+        "https://inn-powerseller-fares-renew.trycloudflare.com/api/calculate/match",
         {
           method: "POST",
           headers: {
