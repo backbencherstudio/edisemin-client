@@ -83,7 +83,7 @@ export default function SearchResults() {
   }
 
   return (
-    <div className="container px-4 py-16 space-y-8">
+    <div className="container px-4 py-16 space-y-8 select-none">
       <div className="max-w-2xl mx-auto text-center">
         <ReusableHeading
           title="Degree you are looking for"
@@ -110,7 +110,7 @@ export default function SearchResults() {
               return (
                 <div
                   key={index}
-                  className="w-full border border-gray-300 bg-white rounded-lg"
+                  className="w-full border border-gray-300 bg-white rounded-lg select-none"
                 >
                   <div
                     className="px-4 py-3 flex justify-between items-center cursor-pointer hover:shadow"
@@ -120,7 +120,7 @@ export default function SearchResults() {
                       )
                     }
                   >
-                    <span className="font-medium text-[#070707]">
+                    <span className="font-medium text-[#070707] cursor-pointer">
                       {category.category_name}
                     </span>
                     {isExpanded ? (

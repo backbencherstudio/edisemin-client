@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           className: "success-toast",
         }}
       />
-      <div className="pt-16">{children}</div>
+      <div className="pt-16 select-none">{children}</div>
       <Footer />
     </div>
   );
