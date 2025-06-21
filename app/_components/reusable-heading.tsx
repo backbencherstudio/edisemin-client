@@ -4,10 +4,12 @@ export default function ReusableHeading({
   title,
   title2,
   description,
+  description2,
 }: {
   title: string;
   title2?: string;
   description: string;
+  description2?: string;
 }) {
   return (
     <div className="text-center my-12 sm:my-20">
@@ -17,6 +19,12 @@ export default function ReusableHeading({
       <p className="text-[#4A4C56] text-base sm:text-lg md:text-xl leading-[150%] mt-4 sm:mt-6 max-w-full sm:max-w-3xl mx-auto">
         {description}
       </p>
+      <br />
+      {description2 && (
+        <p className="text-[#4A4C56] text-base sm:text-lg md:text-xl leading-[150%] mt-4 sm:mt-2 max-w-full sm:max-w-3xl md:max-w-5xl mx-auto">
+          {description2}
+        </p>
+      )}
     </div>
   );
 }
