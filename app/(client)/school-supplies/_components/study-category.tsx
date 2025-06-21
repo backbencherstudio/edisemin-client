@@ -167,45 +167,41 @@ const StudyCategories: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6 space-y-6 ">
+    <div className="container mx-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
       {categories.map((category) => (
-        <Card
-          key={category.id}
-          //   className={`${category.backgroundColor} ${category.borderColor} border-2`}
-          className="border "
-        >
-          <CardContent className="p-6">
-            <div className="flex items-start justify-between">
+        <Card key={category.id} className="border">
+          <CardContent className="p-4 sm:p-6">
+            <div className="flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-8">
               {/* Left Content */}
-              <div className="flex-1 pr-8">
+              <div className="flex-1 lg:pr-8 w-full">
                 {/* Header */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-3">
                   <div
                     className={`${category.backgroundColor} ${category.borderColor} border-2 p-2 rounded-2xl`}
                   >
-                    <category.icon className="w-8 h-8 text-[#5B46FF]" />
+                    <category.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#5B46FF]" />
                   </div>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold text-[#070707] text-[28px] leading-[126%]">
+                    <span className="bg-white rounded-full w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center text-xs sm:text-sm md:text-[28px] font-semibold text-[#070707] leading-[126%]">
                       {category.id}
                     </span>
-                    <h2 className="text-lg text-[#070707] text-[28px] font-semibold leading-[126%]">
+                    <h2 className="text-base sm:text-lg md:text-[28px] text-[#070707] font-semibold leading-[126%]">
                       {category.title}
                     </h2>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-lg text-[#4A4C56] mb-4">
+                <p className="text-sm sm:text-lg text-[#4A4C56] mb-4">
                   {category.description}
                 </p>
 
-                <div className=" md:flex items-center justify-between gap-10">
-                  <div className="">
+                <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-10">
+                  <div className="w-full lg:flex-1">
                     {/* Items */}
                     {category.items.map((section, sectionIndex) => (
                       <div key={sectionIndex} className="mb-3">
-                        <h3 className="text-[24px] font-medium text-[#070707] mb-2 leading-[150%]">
+                        <h3 className="text-lg sm:text-[24px] font-medium text-[#070707] mb-2 leading-[150%]">
                           {section.category}
                         </h3>
 
@@ -216,10 +212,10 @@ const StudyCategories: React.FC = () => {
                               className="flex items-start gap-2"
                             >
                               <div className="flex items-center gap-2">
-                                <span className="mt-1 text-[#5B46FF] text-3xl">
+                                <span className="mt-1 text-[#5B46FF] text-2xl sm:text-3xl">
                                   •
                                 </span>
-                                <span className="text-lg text-[#4A4C56] leading-[160%]">
+                                <span className="text-sm sm:text-lg text-[#4A4C56] leading-[160%]">
                                   {item}
                                 </span>
                               </div>
@@ -231,8 +227,8 @@ const StudyCategories: React.FC = () => {
                   </div>
 
                   {/* Right Content - Recommendations */}
-                  <div className="w-[507px] flex-shrink-0">
-                    <h3 className="text-[24px] font-medium text-[#070707] mb-2 leading-[150%]">
+                  <div className="w-full lg:w-[300px] xl:w-[400px] 2xl:w-[507px] flex-shrink-0">
+                    <h3 className="text-lg sm:text-[24px] font-medium text-[#070707] mb-2 leading-[150%]">
                       {category.recommendations.title}
                     </h3>
                     <div className="space-y-2">
@@ -240,10 +236,10 @@ const StudyCategories: React.FC = () => {
                         <Link
                           key={linkIndex}
                           href={link.url}
-                          className="flex items-center gap-2 text-lg text-[#5B46FF] hover:text-[#5a538d] group border py-4 px-2 font-medium leading-[160%] rounded-lg"
+                          className="flex items-center gap-2 text-sm sm:text-lg text-[#5B46FF] hover:text-[#5a538d] group border py-3 sm:py-4 px-2 font-medium leading-[160%] rounded-lg"
                         >
                           <span className="flex-1">{link.text}</span>
-                          <ExternalLink className="w-6 h-6  group-hover:opacity-100" />
+                          <ExternalLink className="w-4 h-4 sm:w-6 sm:h-6 group-hover:opacity-100" />
                         </Link>
                       ))}
                     </div>
