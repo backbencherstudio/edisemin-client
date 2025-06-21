@@ -2,6 +2,7 @@ import ReusableBanner from "@/app/_components/reusable-banner";
 import ReusableHeading from "@/app/_components/reusable-heading";
 import React from "react";
 import StudyCategories from "./_components/study-category";
+import FinalThoughts from "./_components/final-thoughts";
 
 export default function SchoolSupplies() {
   return (
@@ -21,6 +22,10 @@ export default function SchoolSupplies() {
       </div>
       <div className="my-16">
         <StudyCategories />
+      </div>
+
+      <div className="mb-16">
+        <FinalThoughts />
       </div>
     </div>
   );
