@@ -179,7 +179,7 @@ const StudyCategories: React.FC = () => {
                     <category.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#5B46FF]" />
                   </div>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-white rounded-full w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center text-xl sm:text-sm md:text-[28px] font-semibold text-[#070707] leading-[126%]">
+                    <span className="bg-white rounded-full w-4 h-4 sm:w-6 sm:h-6 flex items-center justify-center text-xs sm:text-sm md:text-[28px] font-semibold text-[#070707] leading-[126%]">
                       {category.id}
                     </span>
                     <h2 className="text-base sm:text-lg md:text-[28px] text-[#070707] font-semibold leading-[126%]">
