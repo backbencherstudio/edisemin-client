@@ -5,6 +5,7 @@ import PhoneIcon from "@/public/icons/phone-icon";
 import TwitterIcon from "@/public/icons/twitter-icon";
 import YoutubeIcon from "@/public/icons/youtube-icon";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 
@@ -41,11 +42,14 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-base">
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
+                <Link
+                  href="/about-us"
+                  className="text-gray-600 hover:text-purple-700"
+                >
                   Our Mission
-                </a>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-gray-600 hover:text-purple-700">
                   Team
                 </a>
@@ -59,7 +63,7 @@ export default function Footer() {
                 <a href="#" className="text-gray-600 hover:text-purple-700">
                   Blog
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

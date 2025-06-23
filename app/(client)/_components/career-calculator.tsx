@@ -46,7 +46,7 @@ export default function CareerCalculator() {
               <ManIcon className="text-violet-600 min-w-[24px]" />
               <div>
                 <h4 className="font-semibold text-lg">
-                  Get personalized career guidance
+                Get career guidance
                 </h4>
                 <p className="leading-[150%] text-[#4A4C56]">
                   Discover careers matched to your subjects.

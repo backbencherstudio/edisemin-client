@@ -14,15 +14,15 @@ const careerCards = [
     alt: "Choose Subjects",
     title: "Start with Your Subject Choices",
     description:
-      "Select both your GCSE and A-Level subjects to begin customizing your career path.",
+      "Select both your GCSE and A-Level subjects to begin customising your career path.",
   },
   {
     id: 2,
     image: "/images/plan-2.png",
     alt: "Smart Matching",
-    title: "Analyzing Your Academic Fit",
+    title: "Analyse Your Academic Fit",
     description:
-      "Based on your selected subjects, we’ll analyze eligibility for different degrees.",
+      "Based on your selected subjects, we’ll analyse eligibility for different degrees.",
   },
   {
     id: 3,
