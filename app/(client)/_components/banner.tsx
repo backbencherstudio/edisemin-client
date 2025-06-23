@@ -135,7 +135,7 @@ export default function Banner() {
         {/* Subtitle */}
         <p className="mt-4 mx-auto text-gray-600 text-sm md:text-xl leading-[150%] mb-10">
           Explore degrees and career paths based on your GCSE and A-Level
-          subjects <br /> designed to help UK students make informed decisions.
+          subjects, <br /> designed to help UK students make informed decisions.
         </p>
 
         {/* Buttons */}
