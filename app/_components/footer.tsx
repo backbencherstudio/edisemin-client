@@ -24,7 +24,7 @@ export default function Footer() {
             />
             <p className="text-[#4A4C56] text-sm sm:text-base">
               Explore degrees and career paths based on your GCSE and A-Level
-              subjects designed to help UK students make informed decisions.
+              subjects, designed to help UK students make informed decisions.
             </p>
             <div className="flex space-x-3">
               <FaFacebook className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2 cursor-pointer" />
