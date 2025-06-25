@@ -9,27 +9,27 @@ const privacySections = [
   {
     title: "2. Information We Collect",
     content:
-      "We may collect information that you voluntarily provide when you use our website, such as your selected subjects, preferences, or contact details (if you subscribe). We do not collect any sensitive personal data.",
+      "We do not collect any personal information from users at this time. While you may interact with the site by selecting subjects or exploring options, these choices are not stored or linked to any individual. We do not collect sensitive personal data, and there are currently no subscription or user account features in place. If this changes in the future, our privacy policy will be updated accordingly.",
   },
   {
     title: "3. How We Use Your Information",
     content:
-      "The information collected is used solely to provide personalized results, improve our platform's accuracy, and communicate with you if you opt-in to receive updates. We never sell or share your data with third parties.",
+      "As we do not collect personal data at this time, no information is used for personalisation, communication, or analytics. All interactions with the tool (e.g., subject selections) are processed locally and are not stored. If we introduce features such as saved preferences or email updates in the future, this policy will be updated to explain how any data will be used and protected.",
   },
-  {
-    title: "4. Data Security",
-    content:
-      "We implement appropriate security measures to protect your data from unauthorized access, alteration, or disclosure.",
-  },
-  {
-    title: "5. Your Rights",
-    content:
-      "We implement appropriate security measures to protect your data from unauthorized access, alteration, or disclosure.",
-  },
+  // {
+  //   title: "4. Data Security",
+  //   content:
+  //     "We implement appropriate security measures to protect your data from unauthorized access, alteration, or disclosure.",
+  // },
+  // {
+  //   title: "5. Your Rights",
+  //   content:
+  //     "We implement appropriate security measures to protect your data from unauthorized access, alteration, or disclosure.",
+  // },
   {
     title: "6. Contact Us",
     content:
-      'If you have any questions about this privacy policy or how we handle your information, please email us at <a href="mailto:careercc@gmail.com" class="text-[#6C63FF] underline">careercc@gmail.com</a>.',
+      'If you have any questions about this privacy policy or how we handle your information, please email us at <a href="mailto:careercc@gmail.com" class="text-[#6C63FF] underline">edisemin88@gmail.com</a>.',
     isHTML: true,
   },
 ];

@@ -3,9 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import LocationIcon from "@/public/icons/location-icon";
 import MessageIcon from "@/public/icons/message-icon";
-import PhoneIcon from "@/public/icons/phone-icon";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -162,9 +160,15 @@ export default function Contact() {
                 <span className="text-[#6C63FF]">
                   <MessageIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2" />
                 </span>
-                <span className="text-gray-800">Career@gmail.com</span>
+                <a
+                  href="mailto:edisemin88@gmail.com"
+                  className="text-gray-800 hover:underline"
+                >
+                  edisemin88@gmail.com
+                </a>
               </div>
-              <div className="flex items-center space-x-3">
+
+              {/* <div className="flex items-center space-x-3">
                 <span className="text-[#6C63FF]">
                   <PhoneIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2" />
                 </span>
@@ -177,7 +181,7 @@ export default function Contact() {
                 <span className="text-gray-800">
                   3380 Main Street, Stratford, CT 06614
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -192,8 +196,15 @@ export default function Contact() {
                   How accurate are the career matches?
                 </h3>
                 <p className="text-[#4A4C56] text-sm sm:text-base">
-                  Complete lists of GCSE and A-Level subjects with detailed
-                  requirements.
+                  The career matches provided by this tool are based on typical
+                  subject requirements and progression routes that are widely
+                  recognised by UK universities and career services. While the
+                  data is compiled from various institutions and sources,
+                  subject requirements for degrees and associated career paths
+                  are generally consistent across the UK. That said, individual
+                  universities and employers may have their own criteria, so we
+                  always recommend double-checking with official sources for the
+                  most up-to-date information.
                 </p>
               </div>
               <div>
@@ -201,8 +212,11 @@ export default function Contact() {
                   Can I save my subject selections?
                 </h3>
                 <p className="text-[#4A4C56] text-sm sm:text-base">
-                  Currently, selections are session-based. We&apos;re working on
-                  user accounts for saving preferences.
+                  Currently, your selections are session-based, meaning they’ll
+                  reset if you refresh the page or close your browser. <br />
+                  However, we’re exploring the option to introduce user accounts
+                  in the future, which would allow you to save your subject
+                  choices and career preferences for easier access later on.
                 </p>
               </div>
               <div>

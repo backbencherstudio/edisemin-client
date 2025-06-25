@@ -56,7 +56,7 @@ const OnlineLearningPlatforms: React.FC = () => {
           name: "MyTutor",
           url: "#",
           description:
-            "Trusted I-JK GCSE/A-Leve1 Tutors\n\nUK-based tutors, video lessons, and subject specialists",
+            "Trusted GCSE/A-Level Tutors\n\nUK-based tutors, video lessons, and subject specialists",
         },
         {
           name: "GoStudent",

@@ -19,10 +19,9 @@ export default function Journy() {
 
       {/* Middle Box with Info */}
       <div className="flex flex-col gap-4">
-        {/* Expert Advisors Box */}
         <div className="bg-[#F9EEF6] rounded-xl p-10 shadow-md ">
           <div className="flex items-center gap-2 mb-2">
-            {/* Avatars */}
+            
             <div className="flex -space-x-2">
               {["avater-1", "avater-2", "avater-3", "avater-4"].map(
                 (name, idx) => (
@@ -43,7 +42,6 @@ export default function Journy() {
           </p>
         </div>
 
-        {/* Quote Box */}
         <div className="bg-[#BEF2E5] rounded-xl p-5 shadow-md w-[280px]">
           <p className="text-sm font-medium text-gray-800 mb-2 leading-[150%] pt-5 pb-2">
             “Your subjects are the start but your ambition defines the journey”

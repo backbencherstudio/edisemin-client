@@ -9,29 +9,41 @@ import {
 
 const faqData = [
   {
+    name: "Elena D",
     question: "How has Career Calculator helped you?",
     answer:
       "Career Calculator helped me connect my O/GCSEs to degree options. I never thought Psychology and Art could lead to so many paths. Now I feel confident planning my future.",
   },
   {
+    name: "Rahim A",
     question: "What made the biggest difference?",
-    answer: "Coming soon...",
+    answer: "It helped me realise that some of the careers I was interested in weren't possible with my current subject choices, which allowed me to rethink my plans early",
   },
   {
+    name: "Maya L",
     question: "Would you recommend it to other students?",
     answer: "Absolutely, it's a great tool.",
   },
   {
+    name: "Tom S",
     question: "Would you recommend it to other students?",
     answer: "Yes, it’s easy to use and helpful.",
   },
   {
+    name: "Nina J",
     question: "How has Career Calculator helped you?",
     answer: "Helped me decide on subjects for university.",
   },
   {
+    name: "Arif K",
     question: "How has Career Calculator helped you?",
     answer: "Provided great insight into career planning.",
+  },
+  {
+    name: "Sophie M",
+    question: "What made the biggest difference?",
+    answer:
+      "It helped me realise that some of the careers I was interested in weren't possible with my current subjects choices, which allowed me to rethink my plans early.",
   },
 ];
 
@@ -44,7 +56,7 @@ export default function StudentCareer() {
           <div className="flex flex-col justify-between gap-8">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="space-y-2">
-                <p className="text-sm font-medium text-gray-500">FAQ & Answer</p>
+                {/* <p className="text-sm font-medium text-gray-500">FAQ & Answer</p> */}
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-cabinet">
                   Student Career <br />
                   <span className="text-[#5B46FF]">Success Stories</span>
@@ -59,9 +71,9 @@ export default function StudentCareer() {
                 Real stories from students who used our Career Calculator to
                 make confident decisions about their future.
               </p>
-              <button className="rounded-full px-6 py-2 w-fit bg-[#5B46FF] text-white hover:text-[#5B46FF] hover:bg-transparent border hover:border-[#5B46FF] ease-in duration-200 cursor-pointer">
+              {/* <button className="rounded-full px-6 py-2 w-fit bg-[#5B46FF] text-white hover:text-[#5B46FF] hover:bg-transparent border hover:border-[#5B46FF] ease-in duration-200 cursor-pointer">
                 Get In Touch
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -92,6 +104,7 @@ export default function StudentCareer() {
                     Q: {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm text-gray-600">
+                    <span className="font-semibold">{item.name}:</span>{" "}
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

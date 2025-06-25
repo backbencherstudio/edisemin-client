@@ -1,12 +1,7 @@
-import InstagramIcon from "@/public/icons/instagram-icon";
-import LocationIcon from "@/public/icons/location-icon";
 import MessageIcon from "@/public/icons/message-icon";
-import PhoneIcon from "@/public/icons/phone-icon";
-import TwitterIcon from "@/public/icons/twitter-icon";
-import YoutubeIcon from "@/public/icons/youtube-icon";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -26,12 +21,12 @@ export default function Footer() {
               Explore degrees and career paths based on your GCSE and A-Level
               subjects, designed to help UK students make informed decisions.
             </p>
-            <div className="flex space-x-3">
+            {/* <div className="flex space-x-3">
               <FaFacebook className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2 cursor-pointer" />
               <InstagramIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2 cursor-pointer" />
               <TwitterIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2 cursor-pointer" />
               <YoutubeIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2 cursor-pointer" />
-            </div>
+            </div> */}
           </div>
 
           {/* About Us */}
@@ -41,11 +36,14 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-base">
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
+                <Link
+                  href="/about-us"
+                  className="text-gray-600 hover:text-purple-700"
+                >
                   Our Mission
-                </a>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-gray-600 hover:text-purple-700">
                   Team
                 </a>
@@ -59,7 +57,7 @@ export default function Footer() {
                 <a href="#" className="text-gray-600 hover:text-purple-700">
                   Blog
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -70,29 +68,49 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
+                <Link href="/" className="text-gray-600 hover:text-purple-700">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
+                <Link
+                  href="/subject-selection"
+                  className="text-gray-600 hover:text-purple-700"
+                >
                   Calculator
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
-                  Services
-                </a>
+                <Link
+                  href="/school-supplies"
+                  className="text-gray-600 hover:text-purple-700"
+                >
+                  School Supplies
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
+                <Link
+                  href="/learning"
+                  className="text-gray-600 hover:text-purple-700"
+                >
+                  Learning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-gray-600 hover:text-purple-700"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-700">
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-600 hover:text-purple-700"
+                >
                   Privacy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -103,7 +121,7 @@ export default function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2">
+              {/* <li className="flex items-start gap-2">
                 <LocationIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2" />
                 <span className="text-[#4A4C56] text-sm sm:text-base">
                   3380 Main Street, Stratford, CT 06614
@@ -114,12 +132,15 @@ export default function Footer() {
                 <span className="text-gray-600 text-sm sm:text-base">
                   (475) 422-2873
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-start gap-2">
                 <MessageIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2" />
-                <span className="text-gray-600 text-sm sm:text-base">
-                  Careerar@gmail.com
-                </span>
+                <a
+                  href="mailto:edisemin88@gmail.com"
+                  className="text-gray-800 hover:underline"
+                >
+                  edisemin88@gmail.com
+                </a>
               </li>
             </ul>
           </div>
