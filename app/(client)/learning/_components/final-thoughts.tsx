@@ -8,11 +8,8 @@ export default function FinalThoughts() {
         <h2 className="text-[#070707] text-2xl md:text-[32px] font-semibold leading-[126%]">
           Final Thoughts
         </h2>
-        <p className="text-[#4A4C56] md:text-lg leading-[160%] max-w-7xl">
-          Being well-prepared doesn&apos;t mean spending a fortune it means
-          being smart with what you buy. Investing in the right school supplies
-          can make your study time more effective and reduce stress during busy
-          exam seasons.
+        <p className="text-[#4A4C56] md:text-lg leading-[160%] max-w-6xl">
+        Every student learns differently — the key is to find tools that match your learning style and goals. Whether you need a tutor or want to master a subject at your own pace, the resources above are a great place to start.
         </p>
       </div>
       <ThoaghtsHero />

@@ -12,7 +12,7 @@ export default function Learning() {
         title=""
         title2="Learning"
         description=""
-        description2="Starting a new school year can be both exciting and overwhelming. One of the best ways to set yourself up for success is by having the right tools from day one"
+        description2="Discover the best tutoring services and online learning platforms to support your studies and help you achieve top GCSE and A-Level results."
       />
       <div>
         <ReusableBanner
