@@ -20,7 +20,7 @@ const careerCards = [
     id: 2,
     image: "/images/plan-2.png",
     alt: "Smart Matching",
-    title: "Analyse Your Academic Fit",
+    title: "Analysing Your Academic Fit",
     description:
       "Based on your selected subjects, we’ll analyse eligibility for different degrees.",
   },

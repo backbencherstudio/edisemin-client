@@ -3,9 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import LocationIcon from "@/public/icons/location-icon";
 import MessageIcon from "@/public/icons/message-icon";
-import PhoneIcon from "@/public/icons/phone-icon";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -162,9 +160,15 @@ export default function Contact() {
                 <span className="text-[#6C63FF]">
                   <MessageIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2" />
                 </span>
-                <span className="text-gray-800">Career@gmail.com</span>
+                <a
+                  href="mailto:edisemin88@gmail.com"
+                  className="text-gray-800 hover:underline"
+                >
+                  edisemin88@gmail.com
+                </a>
               </div>
-              <div className="flex items-center space-x-3">
+
+              {/* <div className="flex items-center space-x-3">
                 <span className="text-[#6C63FF]">
                   <PhoneIcon className="w-8 h-8 text-white bg-[#5B46FF] rounded-full p-2" />
                 </span>
@@ -177,7 +181,7 @@ export default function Contact() {
                 <span className="text-gray-800">
                   3380 Main Street, Stratford, CT 06614
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 
