@@ -196,8 +196,15 @@ export default function Contact() {
                   How accurate are the career matches?
                 </h3>
                 <p className="text-[#4A4C56] text-sm sm:text-base">
-                  Complete lists of GCSE and A-Level subjects with detailed
-                  requirements.
+                  The career matches provided by this tool are based on typical
+                  subject requirements and progression routes that are widely
+                  recognised by UK universities and career services. While the
+                  data is compiled from various institutions and sources,
+                  subject requirements for degrees and associated career paths
+                  are generally consistent across the UK. That said, individual
+                  universities and employers may have their own criteria, so we
+                  always recommend double-checking with official sources for the
+                  most up-to-date information.
                 </p>
               </div>
               <div>
@@ -205,8 +212,11 @@ export default function Contact() {
                   Can I save my subject selections?
                 </h3>
                 <p className="text-[#4A4C56] text-sm sm:text-base">
-                  Currently, selections are session-based. We&apos;re working on
-                  user accounts for saving preferences.
+                  Currently, your selections are session-based, meaning they’ll
+                  reset if you refresh the page or close your browser. <br />
+                  However, we’re exploring the option to introduce user accounts
+                  in the future, which would allow you to save your subject
+                  choices and career preferences for easier access later on.
                 </p>
               </div>
               <div>
