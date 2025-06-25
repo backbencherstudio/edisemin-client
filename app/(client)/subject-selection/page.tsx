@@ -8,11 +8,11 @@ export default function SubjectSelection() {
       <ReusableHeading
         title="Career Path"
         title2="Calculator"
-        description="Select your GCSE and A-Level subjects to discover matching career paths"
+        description="Select your GCSE and A-Level subjects to discover matching degree and career paths"
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <InfoCard
+        {/* <InfoCard
           type="success"
           items={[
             "You need at least 5 GCSEs (currently have 0)",
@@ -27,7 +27,7 @@ export default function SubjectSelection() {
           items={[
             "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
           ]}
-        />
+        /> */}
 
         <InfoCard
           title="A-Level Requirements:"
@@ -44,7 +44,7 @@ export default function SubjectSelection() {
         <InfoCard
           title="A-Level Grade Requirements:"
           items={[
-            "A-Level grades range from A* (highest) to C (minimum for university)",
+            "A-Level grades range from A* (highest) to E (minimum for university)",
             "Most universities require grades A*-C for degree program entry",
             "Competitive courses may require A*-B grades",
             "Some subjects may have specific minimum grade requirements",
@@ -63,6 +63,25 @@ export default function SubjectSelection() {
       </div>
 
       <SubjectSelectionInfo />
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10 -mt-8">
+        <InfoCard
+          type="success"
+          items={[
+            "You need at least 5 GCSEs (currently have 0)",
+            "<strong>Missing mandatory GCSE subjects:</strong> English Language, Mathematics",
+            // "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
+          ]}
+        />
+
+        <InfoCard
+          type="success"
+          title="Science Requirement:"
+          items={[
+            "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
+          ]}
+        />
+      </div>
     </div>
   );
 }
