@@ -68,7 +68,7 @@ export default function Contact() {
         Have questions or feedback? We&apos;d love to hear from you.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Send Us a Message */}
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
           <h2 className="text-xl sm:text-2xl font-semibold text-[#070707] mb-4">
