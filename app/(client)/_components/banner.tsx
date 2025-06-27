@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { LuMoveUpRight } from "react-icons/lu";
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -140,13 +139,13 @@ export default function Banner() {
 
         {/* Buttons */}
         <div className="mt-6 flex justify-center items-center gap-4 flex-wrap">
-          <Link
+          {/* <Link
             href="/subject-selection"
             className="rounded-full px-6 text-[#6C63FF] hover:text-white duration-300 ease-linear border border-[#6C63FF] hover:bg-[#5749d6] transition cursor-pointer py-2 flex items-center gap-2"
           >
             Choose Degree
             <LuMoveUpRight className="w-6 h-6 bg-white rounded-full p-1 text-[#5B46FF] hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md border border-[#6C63FF]" />
-          </Link>
+          </Link> */}
           <Link
             href="/subject-selection"
             className="rounded-full px-6 text-[#6C63FF] hover:text-white duration-300 ease-linear border border-[#6C63FF] hover:bg-[#5749d6] transition cursor-pointer py-2"

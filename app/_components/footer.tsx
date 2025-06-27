@@ -77,7 +77,7 @@ export default function Footer() {
                   href="/subject-selection"
                   className="text-gray-600 hover:text-purple-700"
                 >
-                  Calculator
+                  Subject Selection
                 </Link>
               </li>
               <li>
@@ -109,7 +109,7 @@ export default function Footer() {
                   href="/privacy-policy"
                   className="text-gray-600 hover:text-purple-700"
                 >
-                  Privacy
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
@@ -147,18 +147,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-10 pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-10 pt-6 border-t flex flex-col sm:flex-row justify-center items-center gap-4">
           <span className="text-gray-600 text-sm text-center sm:text-left">
             © 2025 Career PLC. All rights reserved.
           </span>
-          <div className="space-x-4 text-sm">
+          {/* <div className="space-x-4 text-sm">
             <a href="#" className="text-gray-600 hover:text-purple-700">
               Privacy Policy
             </a>
             <a href="#" className="text-gray-600 hover:text-purple-700">
               Terms and Conditions
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
