@@ -68,9 +68,9 @@ export default function Contact() {
         Have questions or feedback? We&apos;d love to hear from you.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 gap-8 items-center justify-center max-w-5xl mx-auto">
         {/* Send Us a Message */}
-        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+        {/* <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
           <h2 className="text-xl sm:text-2xl font-semibold text-[#070707] mb-4">
             Send us a message
           </h2>
@@ -78,7 +78,6 @@ export default function Contact() {
             We will send you the latest company and industry news
           </p>
 
-          {/* Contact Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <label className="block text-sm text-gray-800 mb-2">Name</label>
@@ -143,7 +142,7 @@ export default function Contact() {
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
-        </div>
+        </div> */}
 
         {/* Get in Touch */}
         <div className="space-y-8">
