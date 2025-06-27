@@ -27,7 +27,7 @@ const privacySections = [
   //     "We implement appropriate security measures to protect your data from unauthorized access, alteration, or disclosure.",
   // },
   {
-    title: "6. Contact Us",
+    title: "4. Contact Us",
     content:
       'If you have any questions about this privacy policy or how we handle your information, please email us at <a href="mailto:careercc@gmail.com" class="text-[#6C63FF] underline">edisemin88@gmail.com</a>.',
     isHTML: true,

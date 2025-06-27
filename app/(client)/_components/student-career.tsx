@@ -12,39 +12,39 @@ const faqData = [
     name: "Elena D",
     question: "How has Career Calculator helped you?",
     answer:
-      "Career Calculator helped me connect my O/GCSEs to degree options. I never thought Psychology and Art could lead to so many paths. Now I feel confident planning my future.",
+      "Career Calculator helped me connect my GCSE and A-Levels to degree options. I never thought Psychology and Art could lead to so many paths. Now I feel confident planning my future.",
   },
   {
     name: "Rahim A",
     question: "What made the biggest difference?",
     answer: "It helped me realise that some of the careers I was interested in weren't possible with my current subject choices, which allowed me to rethink my plans early",
   },
-  {
-    name: "Maya L",
-    question: "Would you recommend it to other students?",
-    answer: "Absolutely, it's a great tool.",
-  },
-  {
-    name: "Tom S",
-    question: "Would you recommend it to other students?",
-    answer: "Yes, it’s easy to use and helpful.",
-  },
-  {
-    name: "Nina J",
-    question: "How has Career Calculator helped you?",
-    answer: "Helped me decide on subjects for university.",
-  },
-  {
-    name: "Arif K",
-    question: "How has Career Calculator helped you?",
-    answer: "Provided great insight into career planning.",
-  },
-  {
-    name: "Sophie M",
-    question: "What made the biggest difference?",
-    answer:
-      "It helped me realise that some of the careers I was interested in weren't possible with my current subjects choices, which allowed me to rethink my plans early.",
-  },
+  // {
+  //   name: "Maya L",
+  //   question: "Would you recommend it to other students?",
+  //   answer: "Absolutely, it's a great tool.",
+  // },
+  // {
+  //   name: "Tom S",
+  //   question: "Would you recommend it to other students?",
+  //   answer: "Yes, it’s easy to use and helpful.",
+  // },
+  // {
+  //   name: "Nina J",
+  //   question: "How has Career Calculator helped you?",
+  //   answer: "Helped me decide on subjects for university.",
+  // },
+  // {
+  //   name: "Arif K",
+  //   question: "How has Career Calculator helped you?",
+  //   answer: "Provided great insight into career planning.",
+  // },
+  // {
+  //   name: "Sophie M",
+  //   question: "What made the biggest difference?",
+  //   answer:
+  //     "It helped me realise that some of the careers I was interested in weren't possible with my current subjects choices, which allowed me to rethink my plans early.",
+  // },
 ];
 
 export default function StudentCareer() {

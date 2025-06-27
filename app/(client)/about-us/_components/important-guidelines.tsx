@@ -50,7 +50,7 @@ export default function ImportantGuidelines() {
       </div>
 
       {/* A-Level Requirements */}
-      <div className="bg-green-50 p-6 rounded-md space-y-2 text-sm text-green-800">
+      {/* <div className="bg-green-50 p-6 rounded-md space-y-2 text-sm text-green-800">
         <p className="font-semibold text-green-900">A-Level Requirements</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Minimum 5 GCSEs required (grades 5-9)</li>
@@ -61,7 +61,7 @@ export default function ImportantGuidelines() {
             (Biology, Chemistry, Physics)
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }
