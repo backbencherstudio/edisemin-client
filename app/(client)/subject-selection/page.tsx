@@ -64,24 +64,7 @@ export default function SubjectSelection() {
 
       <SubjectSelectionInfo />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10 -mt-8">
-        <InfoCard
-          type="success"
-          items={[
-            "You need at least 5 GCSEs (currently have 0)",
-            "<strong>Missing mandatory GCSE subjects:</strong> English Language, Mathematics",
-            // "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
-          ]}
-        />
-
-        <InfoCard
-          type="success"
-          title="Science Requirement:"
-          items={[
-            "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
-          ]}
-        />
-      </div>
+      
     </div>
   );
 }
