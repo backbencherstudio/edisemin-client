@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import CalculatorIcon from "@/public/icons/calculator-icon";
 import { useRouter } from "next/navigation";
+import InfoCard from "./info-card";
 
 const gcseGrades = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 const aLevelGrades = ["A*", "A", "B", "C", "D", "E"];
@@ -234,133 +235,156 @@ export default function SubjectSelectionInfo() {
   };
 
   return (
-    <div className="container mx-auto p-6 sm:p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
-      {/* GCSE Subjects */}
-      <div className="bg-white p-6 rounded-lg shadow border">
-        <h2 className="text-lg sm:text-xl text-[#0B0A33] font-bold mb-2">
-          GCSE Subjects{" "}
-          <span className="text-[#4A4C56] text-sm">
-            (min 5 required, max 12 allowed)
-          </span>
-        </h2>
-        <div className="max-h-96 overflow-y-auto space-y-4">
-          {gcseSubjects.map((subject, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between gap-2"
-            >
-              <div className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  id={`gcse-${index}`}
-                  checked={gcseSelections[subject.name] !== undefined}
-                  onChange={(e) =>
-                    handleGCSEChange(
-                      subject.name,
-                      e.target.checked,
-                      e.target.checked ? gcseGrades[0] : undefined
-                    )
-                  }
-                  className="sm:w-4 sm:h-4 w-5 h-5"
-                />
-                <label
-                  htmlFor={`gcse-${index}`}
-                  className="text-sm sm:text-base text-[#4A4C56]"
-                >
-                  {subject.name}
-                </label>
-                {subject.mandatory && (
-                  <span className="text-white text-xs bg-red-500 px-2 py-0.5 rounded-full">
-                    Mandatory
-                  </span>
+    <div>
+      <div className="container mx-auto p-6 sm:p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {/* GCSE Subjects */}
+        <div className="bg-white p-6 rounded-lg shadow border">
+          <h2 className="text-lg sm:text-xl text-[#0B0A33] font-bold mb-2">
+            GCSE Subjects{" "}
+            <span className="text-[#4A4C56] text-sm">
+              (min 5 required, max 12 allowed)
+            </span>
+          </h2>
+          <div className="max-h-96 overflow-y-auto space-y-4">
+            {gcseSubjects.map((subject, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-between gap-2"
+              >
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id={`gcse-${index}`}
+                    checked={gcseSelections[subject.name] !== undefined}
+                    onChange={(e) =>
+                      handleGCSEChange(
+                        subject.name,
+                        e.target.checked,
+                        e.target.checked ? gcseGrades[0] : undefined
+                      )
+                    }
+                    className="sm:w-4 sm:h-4 w-5 h-5"
+                  />
+                  <label
+                    htmlFor={`gcse-${index}`}
+                    className="text-sm sm:text-base text-[#4A4C56]"
+                  >
+                    {subject.name}
+                  </label>
+                  {subject.mandatory && (
+                    <span className="text-white text-xs bg-red-500 px-2 py-0.5 rounded-full">
+                      Mandatory
+                    </span>
+                  )}
+                </div>
+                {gcseSelections[subject.name] !== undefined && (
+                  <select
+                    value={gcseSelections[subject.name]}
+                    onChange={(e) =>
+                      handleGCSEChange(
+                        subject.name,
+                        true,
+                        Number(e.target.value)
+                      )
+                    }
+                    className="border rounded px-2 py-1 text-sm sm:text-base"
+                  >
+                    {gcseGrades.map((grade) => (
+                      <option key={grade} value={grade}>
+                        {grade}
+                      </option>
+                    ))}
+                  </select>
                 )}
               </div>
-              {gcseSelections[subject.name] !== undefined && (
-                <select
-                  value={gcseSelections[subject.name]}
-                  onChange={(e) =>
-                    handleGCSEChange(subject.name, true, Number(e.target.value))
-                  }
-                  className="border rounded px-2 py-1 text-sm sm:text-base"
-                >
-                  {gcseGrades.map((grade) => (
-                    <option key={grade} value={grade}>
-                      {grade}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* A-Level Subjects */}
-      <div className="bg-white p-6 rounded-lg shadow border">
-        <h2 className="text-lg sm:text-xl text-[#0B0A33] font-bold mb-2">
-          A-Level Subjects{" "}
-          <span className="text-gray-500 text-sm">
-            (typically 3–4 subjects)
-          </span>
-        </h2>
-        <div className="max-h-96 overflow-y-auto space-y-4">
-          {aLevelSubjects.map((subject, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between gap-2"
-            >
-              <div className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  id={`alevel-${index}`}
-                  checked={aLevelSelections[subject] !== undefined}
-                  onChange={(e) =>
-                    handleALevelChange(
-                      subject,
-                      e.target.checked,
-                      e.target.checked ? aLevelGrades[0] : undefined
-                    )
-                  }
-                  className="sm:w-4 sm:h-4 w-5 h-5"
-                />
-                <label
-                  htmlFor={`alevel-${index}`}
-                  className="text-sm sm:text-base text-[#4A4C56]"
-                >
-                  {subject}
-                </label>
-              </div>
-              {aLevelSelections[subject] !== undefined && (
-                <select
-                  value={aLevelSelections[subject]}
-                  onChange={(e) =>
-                    handleALevelChange(subject, true, e.target.value)
-                  }
-                  className="border rounded px-2 py-1 text-sm sm:text-base"
-                >
-                  {aLevelGrades.map((grade) => (
-                    <option key={grade} value={grade}>
-                      {grade}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Eligibility Errors */}
-      {eligibilityErrors.length > 0 && (
-        <div className="col-span-1 sm:col-span-2 text-red-500 text-sm mt-4">
-          <ul>
-            {eligibilityErrors.map((error, index) => (
-              <li key={index}>{error}</li>
             ))}
-          </ul>
+          </div>
         </div>
-      )}
 
+        {/* A-Level Subjects */}
+        <div className="bg-white p-6 rounded-lg shadow border">
+          <h2 className="text-lg sm:text-xl text-[#0B0A33] font-bold mb-2">
+            A-Level Subjects{" "}
+            <span className="text-gray-500 text-sm">
+              (typically 3–4 subjects)
+            </span>
+          </h2>
+          <div className="max-h-96 overflow-y-auto space-y-4">
+            {aLevelSubjects.map((subject, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-between gap-2"
+              >
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id={`alevel-${index}`}
+                    checked={aLevelSelections[subject] !== undefined}
+                    onChange={(e) =>
+                      handleALevelChange(
+                        subject,
+                        e.target.checked,
+                        e.target.checked ? aLevelGrades[0] : undefined
+                      )
+                    }
+                    className="sm:w-4 sm:h-4 w-5 h-5"
+                  />
+                  <label
+                    htmlFor={`alevel-${index}`}
+                    className="text-sm sm:text-base text-[#4A4C56]"
+                  >
+                    {subject}
+                  </label>
+                </div>
+                {aLevelSelections[subject] !== undefined && (
+                  <select
+                    value={aLevelSelections[subject]}
+                    onChange={(e) =>
+                      handleALevelChange(subject, true, e.target.value)
+                    }
+                    className="border rounded px-2 py-1 text-sm sm:text-base"
+                  >
+                    {aLevelGrades.map((grade) => (
+                      <option key={grade} value={grade}>
+                        {grade}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Eligibility Errors */}
+        {eligibilityErrors.length > 0 && (
+          <div className="col-span-1 sm:col-span-2 text-red-500 text-sm mt-4">
+            <ul>
+              {eligibilityErrors.map((error, index) => (
+                <li key={index}>{error}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-5">
+        <InfoCard
+          type="success"
+          items={[
+            "You need at least 5 GCSEs",
+            "<strong>Mandatory GCSE subjects:</strong> English Language, English Literature, Mathematics",
+            // "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
+          ]}
+        />
+
+        <InfoCard
+          type="success"
+          title="Science Requirement:"
+          items={[
+            "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
+          ]}
+        />
+      </div>
       {/* Button */}
       <div className="col-span-1 sm:col-span-2 flex justify-center mb-12 sm:mb-20">
         <button

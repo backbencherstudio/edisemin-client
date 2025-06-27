@@ -35,7 +35,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, items, type = "info" }) => {
   const { bg, icon, text } = styles[type];
 
   return (
-    <div className={`border rounded-md p-4 ${bg} space-y-2`}>
+    <div className={`border rounded-md p-4 ${bg} space-y-2 mx-5`}>
       <div className="flex items-start gap-2">
         <AlertIcon className={`w-5 h-5 mt-0.5 shrink-0 ${icon}`} />
         <div>
