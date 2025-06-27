@@ -21,7 +21,6 @@ export default function Journy() {
       <div className="flex flex-col gap-4">
         <div className="bg-[#F9EEF6] rounded-xl p-10 shadow-md ">
           <div className="flex items-center gap-2 mb-2">
-            
             <div className="flex -space-x-2">
               {["avater-1", "avater-2", "avater-3", "avater-4"].map(
                 (name, idx) => (
@@ -37,8 +36,10 @@ export default function Journy() {
               )}
             </div>
           </div>
-          <p className="text-sm font-semibold text-gray-800 py-2 leading-[150%]">
-            We Have 30+ <br /> Expert Advisors
+          <p className="text-sm font-medium text-gray-800 py-2 leading-[150%] max-w-[190px]">
+            {/* We Have 30+ <br /> Expert Advisors */}
+            Dedicated experts ready to help you make the right choices for your
+            future.
           </p>
         </div>
 
@@ -46,7 +47,7 @@ export default function Journy() {
           <p className="text-sm font-medium text-gray-800 mb-2 leading-[150%] pt-5 pb-2">
             “Your subjects are the start but your ambition defines the journey”
           </p>
-          <p className="text-xs font-semibold text-gray-700">Elena D.</p>
+          {/* <p className="text-xs font-semibold text-gray-700">Elena D.</p> */}
           <p className="text-xs text-gray-500 pb-5">Career Guidance Mentor</p>
         </div>
       </div>

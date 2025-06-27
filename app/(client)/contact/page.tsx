@@ -1,63 +1,63 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
 import MessageIcon from "@/public/icons/message-icon";
 import React from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
+// import { useForm } from "react-hook-form";
+// import { toast } from "sonner";
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  issue: string;
-}
+// interface ContactFormData {
+//   name: string;
+//   email: string;
+//   phone: string;
+//   issue: string;
+// }
 
 export default function Contact() {
   // Initialize the React Hook Form
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<ContactFormData>();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors, isSubmitting },
+  //   reset,
+  // } = useForm<ContactFormData>();
 
   // Function to handle form submission
-  const onSubmit = async (data: ContactFormData) => {
-    try {
-      // Send the form data to the API
-      const response = await fetch(
-        "https://inn-powerseller-fares-renew.trycloudflare.com/api/support/create",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+  // const onSubmit = async (data: ContactFormData) => {
+  //   try {
+  //     // Send the form data to the API
+  //     const response = await fetch(
+  //       "https://inn-powerseller-fares-renew.trycloudflare.com/api/support/create",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(data),
+  //       }
+  //     );
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
+  //     if (!response.ok) {
+  //       throw new Error("Failed to send message");
+  //     }
 
-      const result = await response.json();
-      console.log("result", result);
-      console.log("Form submitted successfully:", result);
+  //     const result = await response.json();
+  //     console.log("result", result);
+  //     console.log("Form submitted successfully:", result);
 
-      // Show success toast
-      toast.success("Message sent successfully! We'll get back to you soon.");
+  //     // Show success toast
+  //     toast.success("Message sent successfully! We'll get back to you soon.");
 
-      // Reset the form after successful submission
-      reset();
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      // Show error toast
-      toast.error("Failed to send message. Please try again.");
-    }
-  };
+  //     // Reset the form after successful submission
+  //     reset();
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     // Show error toast
+  //     toast.error("Failed to send message. Please try again.");
+  //   }
+  // };
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-16 sm:py-20 space-y-12">
