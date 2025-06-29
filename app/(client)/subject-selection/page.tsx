@@ -28,6 +28,24 @@ export default function SubjectSelection() {
             "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
           ]}
         /> */}
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-5"> */}
+        <InfoCard
+          type="success"
+          items={[
+            "You need at least 5 GCSEs",
+            "<strong>Mandatory GCSE subjects:</strong> English Language, English Literature, Mathematics",
+            // "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
+          ]}
+        />
+
+        <InfoCard
+          type="success"
+          title="Science Requirement:"
+          items={[
+            "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
+          ]}
+        />
+        {/* </div> */}
 
         <InfoCard
           title="A-Level Requirements:"
@@ -63,8 +81,6 @@ export default function SubjectSelection() {
       </div>
 
       <SubjectSelectionInfo />
-
-      
     </div>
   );
 }
