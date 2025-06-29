@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import CalculatorIcon from "@/public/icons/calculator-icon";
 import { useRouter } from "next/navigation";
-import InfoCard from "./info-card";
 
 const gcseGrades = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 const aLevelGrades = ["A*", "A", "B", "C", "D", "E"];
@@ -367,24 +366,7 @@ export default function SubjectSelectionInfo() {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-5">
-        <InfoCard
-          type="success"
-          items={[
-            "You need at least 5 GCSEs",
-            "<strong>Mandatory GCSE subjects:</strong> English Language, English Literature, Mathematics",
-            // "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
-          ]}
-        />
-
-        <InfoCard
-          type="success"
-          title="Science Requirement:"
-          items={[
-            "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
-          ]}
-        />
-      </div>
+      
       {/* Button */}
       <div className="col-span-1 sm:col-span-2 flex justify-center mb-12 sm:mb-20">
         <button
