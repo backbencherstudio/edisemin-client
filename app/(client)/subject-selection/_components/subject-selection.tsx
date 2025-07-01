@@ -187,7 +187,7 @@ export default function SubjectSelectionInfo() {
 
       // Make API call
       const response = await fetch(
-        "https://inn-powerseller-fares-renew.trycloudflare.com/api/calculate/match",
+        "http://localhost:3005/api/calculate/match",
         {
           method: "POST",
           headers: {

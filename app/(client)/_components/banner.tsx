@@ -22,7 +22,7 @@ export default function Banner() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://inn-powerseller-fares-renew.trycloudflare.com/api/calculate/suggest?q=${query}`
+        `http://localhost:3005/api/calculate/suggest?q=${query}`
       );
       const data = await response.json();
       console.log("Suggestions result:", data);
@@ -40,7 +40,7 @@ export default function Banner() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://inn-powerseller-fares-renew.trycloudflare.com/api/calculate/search?q=${query}`
+        `http://localhost:3005/api/calculate/search?q=${query}`
       );
       const data = await response.json();
       console.log("Data for query:", query, data);
