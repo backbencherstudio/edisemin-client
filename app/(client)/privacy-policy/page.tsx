@@ -29,7 +29,7 @@ const privacySections = [
   {
     title: "4. Contact Us",
     content:
-      'If you have any questions about this privacy policy or how we handle your information, please email us at <a href="mailto:careercc@gmail.com" class="text-[#6C63FF] underline">edisemin88@gmail.com</a>.',
+      'If you have any questions about this privacy policy or how we handle your information, please email us at <a href="mailto:edsesmin88@gmail.com" class="text-[#6C63FF] underline">edsesmin88@gmail.com</a>.',
     isHTML: true,
   },
 ];
