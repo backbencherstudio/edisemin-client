@@ -17,7 +17,25 @@ const faqData = [
   {
     name: "Rahim A",
     question: "What made the biggest difference?",
-    answer: "It helped me realise that some of the careers I was interested in weren't possible with my current subject choices, which allowed me to rethink my plans early",
+    answer:
+      "It helped me realise that some of the careers I was interested in weren't possible with my current subject choices, which allowed me to rethink my plans early",
+  },
+  {
+    name: "Maya L",
+    question: "How did Career Calculator help you choose your A-Levels?",
+    answer:
+      "I wasn’t sure which A-Levels to take for a career in engineering. Career Calculator showed me that Physics and Maths were essential, and helped me avoid picking subjects that wouldn’t fit my goal.",
+  },
+  {
+    name: "Tom S",
+    question: "What did you learn from using Career Calculator?",
+    answer:
+      "It made me realise how many degrees I could access with my current A-Levels. I thought I’d be limited, but the calculator opened my eyes to new options like Environmental Science and Medical Genetics.",
+  },
+  {
+    name: "Nina J",
+    question: "Would you recommend it to other students?",
+    answer: "Absolutely! It's a great tool!",
   },
   // {
   //   name: "Maya L",

@@ -38,8 +38,7 @@ export default function Journy() {
           </div>
           <p className="text-sm font-medium text-gray-800 py-2 leading-[150%] max-w-[190px]">
             {/* We Have 30+ <br /> Expert Advisors */}
-            Dedicated experts ready to help you make the right choices for your
-            future.
+            Dedicated tool ready to help you make the right choices for your future.
           </p>
         </div>
 
@@ -48,7 +47,7 @@ export default function Journy() {
             “Your subjects are the start but your ambition defines the journey”
           </p>
           {/* <p className="text-xs font-semibold text-gray-700">Elena D.</p> */}
-          <p className="text-xs text-gray-500 pb-5">Career Guidance Mentor</p>
+          {/* <p className="text-xs text-gray-500 pb-5">Career Guidance Mentor</p> */}
         </div>
       </div>
 
