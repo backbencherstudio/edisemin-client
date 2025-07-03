@@ -36,7 +36,7 @@ export default function OurPurpose() {
             <p className="text-base text-[#777980] leading-[150%]">
               Our tool is designed for students, parents, and educators who need
               reliable information about academic requirements and career
-              prospects. Whether you’re planning your GCSEs or considering
+              prospects. Whether you’re planning your GCSE&apos;s or considering
               A-Level options, we’re here to guide you.
             </p>
           </div>

@@ -32,7 +32,7 @@ export default function SubjectSelection() {
         <InfoCard
           type="success"
           items={[
-            "You need at least 5 GCSEs",
+            "You need at least 5 GCSE's",
             "<strong>Mandatory GCSE subjects:</strong> English Language, English Literature, Mathematics",
             // "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
           ]}
@@ -40,7 +40,7 @@ export default function SubjectSelection() {
 
         <InfoCard
           type="success"
-          title="Science Requirement:"
+          title="GCSE Science Requirement:"
           items={[
             "You must take either <strong>Combined Science</strong> OR all three individual sciences (Biology, Chemistry, Physics)",
           ]}
@@ -50,7 +50,7 @@ export default function SubjectSelection() {
         <InfoCard
           title="A-Level Requirements:"
           items={[
-            "Need at least 5 GCSEs with grades 4-9 to study A-Levels",
+            "Need at least 5 GCSE's with grades 4-9 to study A-Levels",
             // "A-Level grades must be A* to C for university entry",
             "For A-Level Maths: Need at least grade 6 in GCSE Maths",
             "For A-Level Further Maths: Need at least grade 8 in GCSE Maths",

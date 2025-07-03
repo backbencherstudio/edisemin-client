@@ -62,7 +62,7 @@ const OnlineLearningPlatforms: React.FC = () => {
           name: "GoStudent",
           url: "#",
           description:
-            "Personalised tutoring Plans\n\nOngoing support and flexible scheduling for GCSEs & A-levels",
+            "Personalised tutoring Plans\n\nOngoing support and flexible scheduling for GCSE's & A-levels",
         },
         {
           name: "Superprof",
