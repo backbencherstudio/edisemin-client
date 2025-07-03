@@ -17,7 +17,7 @@ export default function Learning() {
       <div>
         <ReusableBanner
           title="Extra Learning Support for GCSE & A-Level Students"
-          subTitle="No matter your starting point, the right learning support can boost your grades, build your confidence, and open doors to future careers. Whether you're preparing for your GCSEs, A-Levels, or simply want to reinforce what you've learned in school, this guide highlights top learning platforms and tutoring services that can help."
+          subTitle="No matter your starting point, the right learning support can boost your grades, build your confidence, and open doors to future careers. Whether you're preparing for your GCSE's, A-Levels, or simply want to reinforce what you've learned in school, this guide highlights top learning platforms and tutoring services that can help."
         />
       </div>
       <div className="my-16">
