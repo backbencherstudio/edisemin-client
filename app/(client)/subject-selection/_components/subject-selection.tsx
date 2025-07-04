@@ -187,7 +187,7 @@ export default function SubjectSelectionInfo() {
 
       // Make API call
       const response = await fetch(
-        "http://localhost:3005/api/calculate/match",
+        "http://backend.careercalculator.co.uk/api/calculate/match",
         {
           method: "POST",
           headers: {
@@ -366,7 +366,7 @@ export default function SubjectSelectionInfo() {
           </div>
         )}
       </div>
-      
+
       {/* Button */}
       <div className="col-span-1 sm:col-span-2 flex justify-center mb-12 sm:mb-20">
         <button
