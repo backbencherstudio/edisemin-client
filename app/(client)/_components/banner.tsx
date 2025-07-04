@@ -22,7 +22,7 @@ export default function Banner() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3005/api/calculate/suggest?q=${query}`
+        `http://backend.careercalculator.co.uk/api/calculate/suggest?q=${query}`
       );
       const data = await response.json();
       console.log("Suggestions result:", data);
@@ -40,7 +40,7 @@ export default function Banner() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3005/api/calculate/search?q=${query}`
+        `http://backend.careercalculator.co.uk/api/calculate/search?q=${query}`
       );
       const data = await response.json();
       console.log("Data for query:", query, data);
