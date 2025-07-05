@@ -21,7 +21,9 @@ interface ApiResponse {
     gcse: Record<string, string>;
     alevel: Record<string, string>;
   };
-  result: CareerPath[];
+  result: {
+    results: CareerPath[];
+  };
 }
 
 export default function SubjectSelectionDynamic() {
@@ -30,11 +32,13 @@ export default function SubjectSelectionDynamic() {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
+  console.log();
+
   useEffect(() => {
     try {
       const calculationId = params.id as string;
       const storedData = localStorage.getItem(`calculation_${calculationId}`);
-      console.log("Stored data:", storedData);
+      // console.log("Stored data:", storedData);
 
       if (storedData) {
         const parsedData = JSON.parse(storedData);
@@ -136,50 +140,54 @@ export default function SubjectSelectionDynamic() {
               Potential career paths:
             </h4>
             <div className="space-y-3">
-              {data.result.map((careerPath, index) => {
-                const isExpanded = expandedCategory === careerPath.category;
-                return (
-                  <div
-                    key={index}
-                    className="w-full border border-gray-300 bg-white rounded-lg"
-                  >
+              {data?.result?.results?.map(
+                (careerPath: CareerPath, index: number) => {
+                  const isExpanded = expandedCategory === careerPath.category;
+                  return (
                     <div
-                      className="px-4 py-3 flex justify-between items-center cursor-pointer hover:shadow"
-                      onClick={() =>
-                        setExpandedCategory(
-                          isExpanded ? null : careerPath.category
-                        )
-                      }
+                      key={index}
+                      className="w-full border border-gray-300 bg-white rounded-lg"
                     >
-                      <span className="font-medium text-[#070707]">
-                        {careerPath.category}
-                      </span>
-                      {isExpanded ? (
-                        <ChevronUp className="w-4 h-4 text-gray-500" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4 text-gray-500" />
+                      <div
+                        className="px-4 py-3 flex justify-between items-center cursor-pointer hover:shadow"
+                        onClick={() =>
+                          setExpandedCategory(
+                            isExpanded ? null : careerPath.category
+                          )
+                        }
+                      >
+                        <span className="font-medium text-[#070707]">
+                          {careerPath.category}
+                        </span>
+                        {isExpanded ? (
+                          <ChevronUp className="w-4 h-4 text-gray-500" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4 text-gray-500" />
+                        )}
+                      </div>
+                      {isExpanded && (
+                        <div className="px-4 pb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                          {careerPath.matching_career_paths.map(
+                            (career: Career, idx: number) => (
+                              <div
+                                key={idx}
+                                className="bg-[#F9F9FF] border border-[#D9E0F3] rounded-md p-4"
+                              >
+                                <p className="text-[#5B46FF] font-semibold text-sm mb-1">
+                                  {career.title}
+                                </p>
+                                <p className="text-[#777980] text-sm leading-relaxed">
+                                  {career.description}
+                                </p>
+                              </div>
+                            )
+                          )}
+                        </div>
                       )}
                     </div>
-                    {isExpanded && (
-                      <div className="px-4 pb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        {careerPath.matching_career_paths.map((career, idx) => (
-                          <div
-                            key={idx}
-                            className="bg-[#F9F9FF] border border-[#D9E0F3] rounded-md p-4"
-                          >
-                            <p className="text-[#5B46FF] font-semibold text-sm mb-1">
-                              {career.title}
-                            </p>
-                            <p className="text-[#777980] text-sm leading-relaxed">
-                              {career.description}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+                  );
+                }
+              )}
             </div>
 
             <div className="mt-8">
