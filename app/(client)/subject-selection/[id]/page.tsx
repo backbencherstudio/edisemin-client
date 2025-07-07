@@ -102,7 +102,7 @@ export default function SubjectSelectionDynamic() {
 
         <div className="bg-[#FBFBFB] p-6 rounded-lg shadow border mt-5">
           <div className="mt-4">
-            <p className="font-medium text-sm text-gray-800 mb-1">
+            <p className="font-medium text-md text-gray-800 mb-[10px]">
               GCSE Requirements
             </p>
             <div className="flex flex-wrap gap-2">
@@ -117,8 +117,8 @@ export default function SubjectSelectionDynamic() {
             </div>
           </div>
 
-          <div className="mt-6">
-            <p className="font-medium text-sm text-gray-800 mb-1">
+          <div className="mt-10">
+            <p className="font-medium text-md text-gray-800 mb-[10px]">
               A-Level Requirements
             </p>
             <div className="flex flex-wrap gap-2">
