@@ -145,7 +145,7 @@ export default function SearchResults() {
                               //     ? "bg-gray-100 text-gray-800 border-gray-300"
                               //     : "bg-green-100 text-green-800 border-green-300"
                               // }`}
-                               className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full border border-green-300"
+                              className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full border border-green-300"
                             >
                               {req.subject} ({req.grade})
                               {/* {req.mandatory && (
