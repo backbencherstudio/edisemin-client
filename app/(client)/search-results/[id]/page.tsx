@@ -83,7 +83,7 @@ export default function SearchResults() {
   }
 
   return (
-    <div className="container px-4 py-16 space-y-8 select-none">
+    <div className="container px-4 py-16 space-y-8 ">
       <div className="max-w-2xl mx-auto text-center">
         <ReusableHeading
           title="Degree you are looking for"
@@ -110,7 +110,7 @@ export default function SearchResults() {
               return (
                 <div
                   key={index}
-                  className="w-full border border-gray-300 bg-white rounded-lg select-none"
+                  className="w-full border border-gray-300 bg-white rounded-lg "
                 >
                   <div
                     className="px-4 py-3 flex justify-between items-center cursor-pointer hover:shadow"
@@ -140,16 +140,17 @@ export default function SearchResults() {
                           {category.gcse_requirements.map((req, idx) => (
                             <span
                               key={idx}
-                              className={`text-base font-medium px-3 py-1 rounded-full border ${
-                                req.mandatory
-                                  ? "bg-gray-100 text-gray-800 border-gray-300"
-                                  : "bg-green-100 text-green-800 border-green-300"
-                              }`}
+                              // className={`text-base font-medium px-3 py-1 rounded-full border ${
+                              //   req.mandatory
+                              //     ? "bg-gray-100 text-gray-800 border-gray-300"
+                              //     : "bg-green-100 text-green-800 border-green-300"
+                              // }`}
+                              className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full border border-green-300"
                             >
                               {req.subject} ({req.grade})
-                              {req.mandatory && (
+                              {/* {req.mandatory && (
                                 <span className="ml-1 text-xs">Required</span>
-                              )}
+                              )} */}
                             </span>
                           ))}
                         </div>
@@ -164,16 +165,17 @@ export default function SearchResults() {
                           {category.a_level_requirements.map((req, idx) => (
                             <span
                               key={idx}
-                              className={`text-base font-medium px-3 py-1 rounded-full border ${
-                                req.mandatory
-                                  ? "bg-gray-100 text-gray-800 border-gray-300"
-                                  : "bg-purple-100 text-purple-800 border-purple-300"
-                              }`}
+                              // className={`text-base font-medium px-3 py-1 rounded-full border ${
+                              //   req.mandatory
+                              //     ? "bg-gray-100 text-gray-800 border-gray-300"
+                              //     : "bg-purple-100 text-purple-800 border-purple-300"
+                              // }`}
+                              className="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full border border-purple-300"
                             >
                               {req.subject} ({req.grade})
-                              {req.mandatory && (
+                              {/* {req.mandatory && (
                                 <span className="ml-1 text-xs">Required</span>
-                              )}
+                              )} */}
                             </span>
                           ))}
                         </div>

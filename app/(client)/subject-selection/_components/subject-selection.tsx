@@ -174,7 +174,10 @@ export default function SubjectSelectionInfo() {
       const alevelData: Record<string, string> = {};
       Object.entries(aLevelSelections).forEach(([subject, grade]) => {
         if (grade !== undefined) {
-          alevelData[subject] = grade;
+          // Convert subject names to match API expectations
+          const formattedSubject =
+            subject === "Mathematics" ? "Maths" : subject;
+          alevelData[formattedSubject] = grade;
         }
       });
 
