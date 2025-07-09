@@ -18,7 +18,7 @@ const careerCards = [
   },
   {
     id: 2,
-    image: "/images/plan-2.png",
+    image: "/images/middlePlan-2.png",
     alt: "Smart Matching",
     title: "Analysing Your Academic Fit",
     description:
@@ -82,10 +82,10 @@ export default function CareerPath() {
                 {/* Text Content */}
                 <p className="text-xl text-[#0B0A33]  font-semibold mt-4 pb-2 leading-[150%]">
                   <strong>{card.title}</strong>
-              </p>
-              <p className="text-[#4A4C56] leading-[150%]">
-                {card.description}
-              </p>
+                </p>
+                <p className="text-[#4A4C56] leading-[150%]">
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}
