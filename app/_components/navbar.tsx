@@ -88,10 +88,10 @@ export default function Navbar() {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center">
-            <button className="bg-[#5B46FF] text-white px-4 py-2 rounded-full hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md cursor-pointer flex items-center gap-4">
+            <Link href='/subject-selection' className="bg-[#5B46FF] text-white px-4 py-2 rounded-full hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md cursor-pointer flex items-center gap-4">
               Get Started
               <LuMoveUpRight className="w-6 h-6 bg-white rounded-full p-1 text-[#5B46FF] hover:bg-[#4736C2] transition-all duration-200 hover:shadow-md" />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

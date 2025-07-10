@@ -97,7 +97,7 @@ export default function SubjectSelectionDynamic() {
           </span>
         </h3>
         <p className="text-2xl font-semibold leading-[126%] text-[#16A355]">
-          Career Paths
+          Degree Choices
         </p>
 
         <div className="bg-[#FBFBFB] p-6 rounded-lg shadow border mt-5">

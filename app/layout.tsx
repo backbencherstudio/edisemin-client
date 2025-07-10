@@ -17,6 +17,11 @@ const cabinetGrotesk = localFont({
 export const metadata: Metadata = {
   title: "Edisemin",
   description: "Edisemin",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
