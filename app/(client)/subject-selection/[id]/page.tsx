@@ -32,7 +32,7 @@ export default function SubjectSelectionDynamic() {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
-  console.log();
+  // console.log();
 
   useEffect(() => {
     try {
