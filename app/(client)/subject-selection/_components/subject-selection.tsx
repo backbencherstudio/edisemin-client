@@ -190,7 +190,7 @@ export default function SubjectSelectionInfo() {
 
       // Make API call
       const response = await fetch(
-        "http://backend.careercalculator.co.uk/api/calculate/match",
+        "https://backend.careercalculator.co.uk/api/calculate/match",
         {
           method: "POST",
           headers: {
