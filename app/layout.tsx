@@ -15,8 +15,8 @@ const cabinetGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Edisemin",
-  description: "Edisemin",
+  title: "Career Calculator",
+  description: "Career Calculator",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
