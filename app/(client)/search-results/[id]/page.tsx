@@ -6,6 +6,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
+// Interfaces
 interface Requirement {
   subject: string;
   grade: string;
@@ -35,15 +36,16 @@ export default function SearchResults() {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
+  console.log("data:", data);
+
+  // Load search data
   useEffect(() => {
     try {
       const searchId = params.id as string;
       const storedData = localStorage.getItem(`search_${searchId}`);
-      console.log("Stored search data:", storedData);
 
       if (storedData) {
         const parsedData = JSON.parse(storedData);
-        console.log("Loaded search data:", parsedData);
         setData(parsedData);
       }
     } catch (error) {
@@ -82,6 +84,24 @@ export default function SearchResults() {
     );
   }
 
+  
+  const formatSubject = (subject: string) => {
+    if (
+      subject.startsWith("Any") || // Matches "Any" or "Any of"
+      subject.startsWith("Any of:")
+    ) {
+      // Extract the list of options (after the colon if present)
+      const subjectList = subject.split(":")[1]?.trim();
+      const subjectArray = subjectList ? subjectList.split(",") : [];
+      const length = subjectArray.length;
+
+      return `Any of the following (${length} subjects): ${subjectArray.join(
+        ", "
+      )}`;
+    }
+    return subject; 
+  };
+
   return (
     <div className="container px-4 py-16 space-y-8 ">
       <div className="max-w-2xl mx-auto text-center">
@@ -93,12 +113,6 @@ export default function SearchResults() {
       </div>
 
       <div>
-        {/* <h3 className="text-2xl font-semibold text-[#070707] mb-2">
-          Search Results <br />
-          <span className="text-xl font-normal text-[#4A4C56]">
-            Based on your search: &ldquo;{data.query}&rdquo;
-          </span>
-        </h3> */}
         <p className="text-2xl font-semibold leading-[126%] text-[#16A355]">
           Matching Categories
         </p>
@@ -140,17 +154,9 @@ export default function SearchResults() {
                           {category.gcse_requirements.map((req, idx) => (
                             <span
                               key={idx}
-                              // className={`text-base font-medium px-3 py-1 rounded-full border ${
-                              //   req.mandatory
-                              //     ? "bg-gray-100 text-gray-800 border-gray-300"
-                              //     : "bg-green-100 text-green-800 border-green-300"
-                              // }`}
                               className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full border border-green-300"
                             >
                               {req.subject} ({req.grade})
-                              {/* {req.mandatory && (
-                                <span className="ml-1 text-xs">Required</span>
-                              )} */}
                             </span>
                           ))}
                         </div>
@@ -165,17 +171,9 @@ export default function SearchResults() {
                           {category.a_level_requirements.map((req, idx) => (
                             <span
                               key={idx}
-                              // className={`text-base font-medium px-3 py-1 rounded-full border ${
-                              //   req.mandatory
-                              //     ? "bg-gray-100 text-gray-800 border-gray-300"
-                              //     : "bg-purple-100 text-purple-800 border-purple-300"
-                              // }`}
                               className="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full border border-purple-300"
                             >
-                              {req.subject} ({req.grade})
-                              {/* {req.mandatory && (
-                                <span className="ml-1 text-xs">Required</span>
-                              )} */}
+                              {formatSubject(req.subject)} ({req.grade})
                             </span>
                           ))}
                         </div>
